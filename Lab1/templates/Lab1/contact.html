@@ -1,0 +1,28 @@
+<!-- contact.html -->
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="text-center">Contact Us</h1>
+        <p class="text-center">Contact information goes here...</p>
+
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message:</label>
+                <textarea class="form-control" id="message" name="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

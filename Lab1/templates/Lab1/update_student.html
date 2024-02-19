@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock title %}
+
+{% block body %}
+<form class="border border-2 p-5" style="background-color: #ffffff;" method="post">
+  {% csrf_token %}
+  <div class="container">
+    <h1 class="mb-4">Update student</h1>
+    <hr class="my-4">
+    <div class="mb-3">
+      <label for="fname" class="form-label"><b>First Name</b></label>
+      <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" value="{{ students.f_name }}" required>
+    </div>
+    <div class="mb-3">
+      <label for="lname" class="form-label"><b>Last Name</b></label>
+      <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" value="{{ students.l_name }}" required>
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label"><b>Age</b></label>
+      <input type="text" class="form-control" id="age" placeholder="Enter Age" name="age" value="{{ students.age }}" required>
+    </div>
+    <div class="clearfix d-flex justify-content-center">
+      <button type="submit" class="btn btn-dark">Update</button>
+    </div>
+  </div>
+</form>
+{% endblock body %}
