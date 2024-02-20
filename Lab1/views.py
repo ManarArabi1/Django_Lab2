@@ -66,7 +66,7 @@ def signin(request):
         print("Email:", email)  # Debugging statement
         print("Password:", password)  # Debugging statement
         
-        User = authenticate(request, email=email, password=password)
+        User = authenticate(request, username=email, password=password)
 
         if User is not None:
             login(request, User)
