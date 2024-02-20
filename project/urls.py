@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Lab1 import views
 
 from Lab1.views import create, delete_student, home, about, contact, signin, signup, student, update
 urlpatterns = [
@@ -29,8 +30,8 @@ urlpatterns = [
     path('login/',signin,name="login"),
     path('create/',create,name="create"),
     path('update/<int:id>',update,name="update"),
-
-
+    path('', views.home, name='home'),
+    path('logout/', views.logout_view, name='logout'),
 
 
 ]

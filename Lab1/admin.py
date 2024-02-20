@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from Lab1.models import Student
+from Lab1.models import Student, my_users
 
-# Register your models here.
 admin.site.register(Student)
+
+admin.site.register(my_users)

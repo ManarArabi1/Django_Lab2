@@ -7,7 +7,8 @@ class Student(models.Model):
     l_name=models.CharField(max_length=50)
     age=models.IntegerField()
 
-class User(models.Model)  :
+class my_users(models.Model)  :
     name=models.CharField(max_length = 50)
     email=models.EmailField(primary_key=True)
     password=  models.CharField(max_length=50) 
+    

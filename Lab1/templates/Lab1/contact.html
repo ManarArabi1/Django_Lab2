@@ -7,8 +7,7 @@
     <div class="container mt-5">
         <h1 class="text-center">Contact Us</h1>
         <p class="text-center">Contact information goes here...</p>
-
-        <form method="post" class="mt-4">
+        <form class="border border-2 p-3"  style="background-color: white;" method="post">
             {% csrf_token %}
             <div class="mb-3">
                 <label for="name" class="form-label">Name:</label>
@@ -22,7 +21,9 @@
                 <label for="message" class="form-label">Message:</label>
                 <textarea class="form-control" id="message" name="message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="d-flex justify-content-center"> <!-- Centering content -->
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
         </form>
     </div>
 {% endblock %}
